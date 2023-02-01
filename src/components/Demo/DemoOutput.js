@@ -3,7 +3,9 @@ import React from 'react';
 import MyParagraph from './MyParagraph';
 
 const DemoOutput = (props) => {
-  return <MyParagraph>{props.show ? 'money Its a paragraph with money!' : ''}</MyParagraph>;
+  const some = props.show;
+  console.log(some + 'Demo');
+  return <p>{some ? 'Its a paragraph with money!' : ''}</p>;
 };
 
 export default React.memo(DemoOutput);

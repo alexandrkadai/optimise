@@ -1,11 +1,9 @@
 import React from 'react';
 
+import MyParagraph from './MyParagraph';
+
 const DemoOutput = (props) => {
-  return (
-    <>
-      <p>{props.show ? 'money Its a paragraph with money!' : ''}</p>
-    </>
-  );
+  return <MyParagraph>{props.show ? 'money Its a paragraph with money!' : ''}</MyParagraph>;
 };
 
-export default DemoOutput;
+export default React.memo(DemoOutput);
